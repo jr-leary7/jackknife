@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569865327226.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "28EA29FE",
+    "lastKnownWriteTime" : 1569866936,
+    "last_content_update" : 1569866936912,
+    "path" : "~/jackknife/R/savePlots.R",
+    "project_path" : "R/savePlots.R",
+    "properties" : {
+        "cursorPosition" : "8,76",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
