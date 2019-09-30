@@ -1,5 +1,5 @@
 Package: jackknife
-Title: Functions mostly pertaining to bioinformatics
+Title: Functions Pertaining to Bioinformatics
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jack",
