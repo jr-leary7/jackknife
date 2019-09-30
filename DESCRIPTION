@@ -5,8 +5,8 @@ Authors@R:
     person(given = "Jack",
            family = "Leary",
            role = c("aut", "cre"),
-           email = "jrleary@live.unc.edu@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "jrleary@live.unc.edu@example.com"
+Maintainer: Jack Leary <jrleary@live.unc.edu>
 Description: Functions I've written and deemed useful enough to save.
 License: What license it uses
 Encoding: UTF-8
