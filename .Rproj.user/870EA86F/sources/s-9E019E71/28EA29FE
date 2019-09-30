@@ -7,12 +7,12 @@
     "folds" : "",
     "hash" : "0",
     "id" : "28EA29FE",
-    "lastKnownWriteTime" : 1569866936,
-    "last_content_update" : 1569866936912,
+    "lastKnownWriteTime" : 1569867725,
+    "last_content_update" : 1569867725766,
     "path" : "~/jackknife/R/savePlots.R",
     "project_path" : "R/savePlots.R",
     "properties" : {
-        "cursorPosition" : "8,76",
+        "cursorPosition" : "4,77",
         "scrollLine" : "0"
     },
     "read_only" : false,
