@@ -2,4 +2,5 @@
 
 export(plotES)
 export(renderRMD)
+export(reorderCols)
 export(savePlots)

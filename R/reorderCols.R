@@ -9,7 +9,6 @@
 #' @export
 #' @examples
 #' reorderCols(x = my_df, matchData = new_df, xCol = 3, newCol = 4)
-#' reorderCols()
 
 reorderCols <- function(x, matchData, xCol, newCol) {
   t <- x

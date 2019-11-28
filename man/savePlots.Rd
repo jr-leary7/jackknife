@@ -9,7 +9,7 @@ savePlots(plotList, geneList, wd)
 \arguments{
 \item{plotList}{A list of previously generated plots}
 
-\item{geneList}{A list of gene names (or other labels) to use to name files}
+\item{geneList}{A list of gene names (or other labels) to use as filenames}
 
 \item{wd}{The directory to which you wish to save the images}
 }
