@@ -15,7 +15,6 @@
 
 
 plotES <- function(geneSetList, numPlots, fgseaRes, ranks) {
-  require(fgsea)
   plotList <- list()
   t <- head(fgseaRes[order(padj), ], n = numPlots)
   pathwayList <- as.list(t$pathway)
