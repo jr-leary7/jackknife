@@ -1,13 +1,13 @@
 Package: jackknife
-Title: Functions Pertaining to Bioinformatics
-Version: 0.0.0.9000
+Title: Bioinformatics and General Time-Saving Functions
+Version: 0.0.0.9100
 Authors@R: 
     person(given = "Jack",
            family = "Leary",
            role = c("aut", "cre"),
            email = "jrleary@live.unc.edu@example.com")
 Maintainer: Jack Leary <jrleary@live.unc.edu>
-Description: Functions I've written and deemed useful enough to save.
+Description: Functions I've written and deemed useful enough to save. Some are for bionformatics specifically, while others are generally applicable.
 Imports: ggplot2, fgsea, dplyr
 License: What license it uses
 Encoding: UTF-8

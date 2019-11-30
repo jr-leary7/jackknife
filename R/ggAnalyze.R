@@ -4,7 +4,6 @@
 #' @param mod This is the model to be analyzed
 #' @keywords model, linear, ggplot2
 #' @export
-#' @import ggplot2
 #' @examples
 #' ggAnalyze(mod = my_lm)
 
@@ -12,14 +11,17 @@ ggAnalyze <- function(mod) {
   # residuals vs. fitted
   res_fit <- ggplot(mapping = aes(x = mod$fitted.values,
                                   y = mod$residuals)) +
-    geom_point() +
+    geom_point(pch = 1) +
     geom_smooth(method = "loess",
                 se = FALSE,
                 color = "red",
-                span = .99,
+                span = .97,
                 size = .5) +
     geom_hline(yintercept = 0, color = "grey") +
     theme_minimal() +
+    theme(panel.border = element_rect(color = "black",
+                                     fill = NA,
+                                     size = 1)) +
     labs(title = "Residuals vs. Fitted Values",
          x = "Fitted",
          y = "Residuals")
@@ -32,12 +34,15 @@ ggAnalyze <- function(mod) {
   quants <- qnorm(props, mean = mean(x), sd = sd(x))
   qq <- ggplot(mapping = aes(x = quants,
                              y = x)) +
-    geom_point() +
+    geom_point(pch = 1) +
     geom_smooth(method = "lm",
                 se = FALSE,
                 color = "red",
                 size = .5) +
     theme_minimal() +
+    theme(panel.border = element_rect(color = "black",
+                                      fill = NA,
+                                      size = 1)) +
     labs(title = "Normal QQ",
          x = "Theretical Quantiles",
          y = "Sample")
@@ -45,13 +50,16 @@ ggAnalyze <- function(mod) {
   # scale-location
   scale_loc <- ggplot(mapping = aes(x = mod$fitted.values,
                                     y = sqrt(abs(rstandard(mod))))) +
-    geom_point() +
+    geom_point(pch = 1) +
     geom_smooth(method = "loess",
                 se = FALSE,
                 color = "red",
-                span = .99,
+                span = .97,
                 size = .5) +
     theme_minimal() +
+    theme(panel.border = element_rect(color = "black",
+                                      fill = NA,
+                                      size = 1)) +
     labs(title = "Scale-Location",
          x = "Fitted",
          y = expression(sqrt("Standardized Residuals")))
@@ -59,21 +67,26 @@ ggAnalyze <- function(mod) {
   ## residuals vs. leverage
   res_lev <- ggplot(mapping = aes(x = hatvalues(mod),
                                   y = rstandard(mod))) +
-    geom_point() +
+    geom_point(pch = 1) +
     geom_smooth(method = "loess",
                 se = FALSE,
                 color = "red",
                 size = .5,
-                span = .99) +
+                span = .97) +
     geom_hline(yintercept = 0, color = "grey") +
     theme_minimal() +
+    theme(panel.border = element_rect(color = "black",
+                                      fill = NA,
+                                      size = 1)) +
     labs(title = "Residuals vs. Leverage",
          x = "Leverage",
          y = expression(sqrt("Standardized Residuals")))
 
   # return
-  print(res_fit)
-  print(qq)
-  print(scale_loc)
-  print(res_lev)
+  par(ask = TRUE)
+  plot(res_fit)
+  plot(qq)
+  plot(scale_loc)
+  plot(res_lev)
+  par(ask = FALSE)
 }
