@@ -9,7 +9,8 @@
 #' @param perms How many permutations to perform on the data, default is 10
 #' @keywords PCA, t-SNE, dimension reduction
 #' @export
-#' @example choosePC(data = my_df, plot = TRUE, center = TRUE, scale = FALSE)
+#' @examples
+#' choosePC(data = my_df, plot = TRUE, center = TRUE, scale = FALSE)
 
 choosePC <- function (data, perms, plot, seed, center, scale) {
 

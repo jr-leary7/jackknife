@@ -1,13 +1,13 @@
 #' An RMarkdown function
 #'
 #' This function renders an RMarkdown file containing scRNAseq data on the longleaf HPC cluster
-#' @param
+#' @param ... This function takes no parameters.
 #' @keywords longleaf
 #' @export
 #' @examples
 #' renderRMD()
 
-renderRMD <- function() {
+renderRMD <- function(...) {
   args <- commandArgs(trailingOnly = TRUE)
   cmd1 <- rmarkdown::render(input = paste0("/nas/longleaf/home/", args[3], "/singleCell/", args[2], "/", args[2], "_longleaf.Rmd"),
                             output_format = "html_document",

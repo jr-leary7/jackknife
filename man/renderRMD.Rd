@@ -4,7 +4,10 @@
 \alias{renderRMD}
 \title{An RMarkdown function}
 \usage{
-renderRMD()
+renderRMD(...)
+}
+\arguments{
+\item{...}{This function takes no parameters.}
 }
 \description{
 This function renders an RMarkdown file containing scRNAseq data on the longleaf HPC cluster
