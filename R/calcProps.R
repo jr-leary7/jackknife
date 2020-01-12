@@ -11,7 +11,7 @@
 
 calcProps <- function(data) {
   # check to make sure labels exist
-  if (is.null(data$SingleR.labels.bulk) & is.null(data$SingleR.labels.sc & is.null(data$SingleR.labels.bulk.fine))) {
+  if (is.null(data$SingleR.labels.bulk) & is.null(data$SingleR.labels.sc) & is.null(data$SingleR.labels.bulk.fine)) {
     stop("You either haven't assigned cell identities, or you misnamed them.")
   }
 
