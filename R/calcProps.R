@@ -10,10 +10,12 @@
 
 
 calcProps <- function(data) {
-  if (is.null(data$SingleR.labels.bulk) & is.null(data$SingleR.labels.sc)) {
+  # check to make sure labels exist
+  if (is.null(data$SingleR.labels.bulk) & is.null(data$SingleR.labels.sc & is.null(data$SingleR.labels.bulk.fine))) {
     stop("You either haven't assigned cell identities, or you misnamed them.")
   }
 
+  # conditional statements for creating dataframes to return
   if (!is.null(data$SingleR.labels.bulk)) {
     cell_types_bulk <- unique(data$SingleR.labels.bulk)
     bulk_props <- c()
@@ -32,17 +34,37 @@ calcProps <- function(data) {
     sc_df <- data.frame(sc_props, cell_types_sc)
   }
 
-  if (!is.null(data$SingleR.labels.bulk) & !is.null(data$SingleR.labels.sc)) {
-    t <- list(bulk_df, sc_df)
+  if (!is.null(data$SingleR.lables.bulk.fine)) {
+    cell_types_bulk_fine <- unique(data$SingleR.labels.bulk.fine)
+    bulk_fine_props <- c()
+    for (i in seq(cell_types_bulk_fine)) {
+      bulk_fine_props[i] <- length(which(data$SingleR.labels.bulk.fine == cell_types_bulk_fine)) / length(data$SingleR.labels.bulk.fine)
+    }
+    bulk_fine_df <- data.frame(bulk_fine_props, cell_types_bulk_fine)
+  }
+
+  # return statement architecture
+  if (!is.null(data$SingleR.labels.bulk) & !is.null(data$SingleR.labels.sc) & !is.null(data$SingleR.labels.bulk.fine)) {
+    t <- list(bulk_df, sc_df, bulk_fine_df)
     return(t)
   } else {
-    if (is.null(data$SingleR.labels.bulk)) {
-      t <- list(bulk_df)
+    if (is.null(data$SingleR.labels.bulk & !is.null(data$SingleR.labels.sc))) {
+      t <- list(bulk_df, sc_df)
       return(t)
     } else {
       if (!is.null(data$SingleR.labels.bulk)) {
         t <- list(sc_df)
         return(t)
+      } else {
+        if (!is.null(data$SingleR.labels.bulk) & !is.null(data$SingleR.labels.bulk.fine)) {
+          t <- list(bulk_df, bulk_fine_df)
+          return(t)
+        } else {
+          if (!is.null(data$SingleR.labels.sc) & !is.null(data$SingleR.labels.bulk.fine)) {
+            t <- list(bulk_fine_df, sc_df)
+            return(t)
+          }
+        }
       }
     }
   }
