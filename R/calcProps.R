@@ -34,11 +34,11 @@ calcProps <- function(data) {
     sc_df <- data.frame(sc_props, cell_types_sc)
   }
 
-  if (!is.null(data$SingleR.lables.bulk.fine)) {
+  if (!is.null(data$SingleR.labels.bulk.fine)) {
     cell_types_bulk_fine <- unique(data$SingleR.labels.bulk.fine)
     bulk_fine_props <- c()
     for (i in seq(cell_types_bulk_fine)) {
-      bulk_fine_props[i] <- length(which(data$SingleR.labels.bulk.fine == cell_types_bulk_fine)) / length(data$SingleR.labels.bulk.fine)
+      bulk_fine_props[i] <- length(which(data$SingleR.labels.bulk.fine == cell_types_bulk_fine[i])) / length(data$SingleR.labels.bulk.fine)
     }
     bulk_fine_df <- data.frame(bulk_fine_props, cell_types_bulk_fine)
   }
