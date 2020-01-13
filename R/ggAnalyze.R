@@ -1,6 +1,6 @@
 #' A function to analyze a linear model visually
 #'
-#' This function returns the four plots returned by default plot.lm(), but using ggplot2
+#' This function is a reimplementation of the four plots returned by default plot.lm() using the ggplot2 library.
 #' @param mod This is the model to be analyzed
 #' @keywords model, linear, ggplot2
 #' @export

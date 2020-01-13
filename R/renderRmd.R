@@ -1,6 +1,6 @@
 #' An RMarkdown function
 #'
-#' This function renders an RMarkdown file containing scRNAseq data on the longleaf HPC cluster
+#' This function renders an RMarkdown file that performs computatinoally intensive single cell RNAseq analysis on the longleaf HPC cluster.
 #' @param ... This function takes no parameters.
 #' @keywords longleaf
 #' @export

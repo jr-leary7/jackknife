@@ -1,6 +1,6 @@
 Package: jackknife
 Title: Bioinformatics and General Time-Saving Functions
-Version: 0.0.0.93
+Version: 0.0.1
 Authors@R: 
     person(given = "Jack",
            family = "Leary",
