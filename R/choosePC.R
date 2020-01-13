@@ -66,14 +66,3 @@ choosePC <- function (data, perms, plot, seed, center, scale) {
 
   return(opt_pc)
 }
-
-
-
-
-
-
-
-
-
-
-

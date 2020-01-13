@@ -11,12 +11,12 @@
 
 calcProps <- function(data) {
   # check to make sure labels exist
-  if (is.null(data$SingleR.labels.bulk) & is.null(data$SingleR.labels.sc) & is.null(data$SingleR.labels.bulk.fine)) {
+  if (!("SingleR.labels.bulk" %in% colnames(data@meta.data)) & !("SingleR.labels.sc" %in% colnames(data@meta.data)) & !("SingleR.labels.bulk.fine" %in% colnames(data@meta.data))) {
     stop("You either haven't assigned cell identities, or you misnamed them.")
   }
 
   # conditional statements for creating dataframes to return
-  if (!is.null(data$SingleR.labels.bulk)) {
+  if ("SingleR.labels.bulk" %in% colnames(data@meta.data)) {
     cell_types_bulk <- unique(data$SingleR.labels.bulk)
     bulk_props <- c()
     for (i in seq(cell_types_bulk)) {
@@ -25,7 +25,7 @@ calcProps <- function(data) {
     bulk_df <- data.frame(bulk_props, cell_types_bulk)
   }
 
-  if (!is.null(data$SingleR.labels.sc)) {
+  if ("SingleR.labels.sc" %in% colnames(data@meta.data)) {
     cell_types_sc <- unique(data$SingleR.labels.sc)
     sc_props <- c()
     for (i in seq(cell_types_sc)) {
@@ -34,7 +34,7 @@ calcProps <- function(data) {
     sc_df <- data.frame(sc_props, cell_types_sc)
   }
 
-  if (!is.null(data$SingleR.labels.bulk.fine)) {
+  if ("SingleR.labels.bulk.fine" %in% colnames(data@meta.data)) {
     cell_types_bulk_fine <- unique(data$SingleR.labels.bulk.fine)
     bulk_fine_props <- c()
     for (i in seq(cell_types_bulk_fine)) {
@@ -43,29 +43,14 @@ calcProps <- function(data) {
     bulk_fine_df <- data.frame(bulk_fine_props, cell_types_bulk_fine)
   }
 
-  # return statement architecture
-  if (!is.null(data$SingleR.labels.bulk) & !is.null(data$SingleR.labels.sc) & !is.null(data$SingleR.labels.bulk.fine)) {
+  # return statement architecture -- could make more precise but not really necessary right now
+  if ("SingleR.labels.bulk" %in% colnames(data@meta.data) & "SingleR.labels.sc" %in% colnames(data@meta.data) & "SingleR.labels.bulk.fine" %in% colnames(data@meta.data)) {
     t <- list(bulk_df, sc_df, bulk_fine_df)
     return(t)
   } else {
-    if (is.null(data$SingleR.labels.bulk & !is.null(data$SingleR.labels.sc))) {
+    if ("SingleR.labels.bulk" %in% colnames(data@meta.data) & "SingleR.labels.sc" %in% colnames(data@meta.data)) {
       t <- list(bulk_df, sc_df)
       return(t)
-    } else {
-      if (!is.null(data$SingleR.labels.bulk)) {
-        t <- list(sc_df)
-        return(t)
-      } else {
-        if (!is.null(data$SingleR.labels.bulk) & !is.null(data$SingleR.labels.bulk.fine)) {
-          t <- list(bulk_df, bulk_fine_df)
-          return(t)
-        } else {
-          if (!is.null(data$SingleR.labels.sc) & !is.null(data$SingleR.labels.bulk.fine)) {
-            t <- list(bulk_fine_df, sc_df)
-            return(t)
-          }
-        }
-      }
     }
   }
 }
