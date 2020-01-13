@@ -10,7 +10,7 @@ renderRMD(...)
 \item{...}{This function takes no parameters.}
 }
 \description{
-This function renders an RMarkdown file containing scRNAseq data on the longleaf HPC cluster
+This function renders an RMarkdown file that performs computatinoally intensive single cell RNAseq analysis on the longleaf HPC cluster.
 }
 \examples{
 renderRMD()

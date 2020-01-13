@@ -20,7 +20,7 @@ choosePC(data, perms, plot, seed, center, scale)
 \item{scale}{Whether or not data should be scaled prior to PCA, default is TRUE}
 }
 \description{
-This function chooses an optimal number of principal components to explain the variance in your data. The amount of variance explained by the principal components is compared to the amount of variance explained by the principle components of a random reshuffing of the columns of the original dataframe, and the two are compared.
+This function chooses an optimal number of principal components to explain the variance in your data. The amount of variance explained by the principal components is compared to the amount of variance explained by the principle components of a random reshuffing of the columns of the original dataframe.
 }
 \examples{
 choosePC(data = my_df, plot = TRUE, center = TRUE, scale = FALSE)

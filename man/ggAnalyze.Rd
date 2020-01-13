@@ -10,7 +10,7 @@ ggAnalyze(mod)
 \item{mod}{This is the model to be analyzed}
 }
 \description{
-This function returns the four plots returned by default plot.lm(), but using ggplot2
+This function is a reimplementation of the four plots returned by default plot.lm() using the ggplot2 library.
 }
 \examples{
 ggAnalyze(mod = my_lm)
