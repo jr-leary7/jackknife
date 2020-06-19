@@ -2,7 +2,7 @@
 #'
 #' This function is a reimplementation of the four plots returned by default plot.lm() using the ggplot2 library.
 #' @param mod This is the model to be analyzed
-#' @keywords model, linear, ggplot2
+#' @import ggplot2
 #' @export
 #' @examples
 #' ggAnalyze(mod = my_lm)

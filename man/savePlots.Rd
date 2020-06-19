@@ -4,18 +4,18 @@
 \alias{savePlots}
 \title{A Plot Saving Function}
 \usage{
-savePlots(plotList, geneList, wd)
+savePlots(plot.list, gene.list, wd)
 }
 \arguments{
+\item{wd}{The directory to which you wish to save the images}
+
 \item{plotList}{A list of previously generated plots}
 
 \item{geneList}{A list of gene names (or other labels) to use as filenames}
-
-\item{wd}{The directory to which you wish to save the images}
 }
 \description{
 This function saves a list of plots of gene expression as .png files in a user-provided directory
 }
 \examples{
-savePlots(plotList = myPlots, geneList = myGenes, wd = "~/username/plots")
+savePlots(plot.list = my_plots, gene.list = myy_enes, wd = "~/username/plots")
 }

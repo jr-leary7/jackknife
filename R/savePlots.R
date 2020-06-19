@@ -6,10 +6,10 @@
 #' @param wd The directory to which you wish to save the images
 #' @export
 #' @examples
-#' savePlots(plotList = myPlots, geneList = myGenes, wd = "~/username/plots")
+#' savePlots(plot.list = my_plots, gene.list = myy_enes, wd = "~/username/plots")
 
 
-savePlots <- function(plotList, geneList, wd) {
+savePlots <- function(plot.list, gene.list, wd) {
   setwd(wd)
   for(i in 1:length(plotList)) {
     png(paste0(as.character(geneList$geneID), ".png"))

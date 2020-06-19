@@ -25,7 +25,3 @@ This function chooses an optimal number of principal components to explain the v
 \examples{
 choosePC(data = my_df, plot = TRUE, center = TRUE, scale = FALSE)
 }
-\keyword{PCA,}
-\keyword{dimension}
-\keyword{reduction}
-\keyword{t-SNE,}

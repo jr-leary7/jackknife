@@ -4,10 +4,7 @@
 \alias{renderRMD}
 \title{An RMarkdown function}
 \usage{
-renderRMD(...)
-}
-\arguments{
-\item{...}{This function takes no parameters.}
+renderRMD()
 }
 \description{
 This function renders an RMarkdown file that performs computatinoally intensive single cell RNAseq analysis on the longleaf HPC cluster.

@@ -15,6 +15,3 @@ This function is a reimplementation of the four plots returned by default plot.l
 \examples{
 ggAnalyze(mod = my_lm)
 }
-\keyword{ggplot2}
-\keyword{linear,}
-\keyword{model,}

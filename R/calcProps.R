@@ -2,7 +2,7 @@
 #'
 #'This function takes as input a Seurat object, which contains cell types identified by the SingleR package. The function calculates the relative amount of each cell type.
 #' @param data The Seurat object containing cell cluster identities
-#' @keywords proportions, cell types, Seurat
+#' @import Seurat
 #' @export
 #' @examples
 #' calcProps(data = my_seurat_object)

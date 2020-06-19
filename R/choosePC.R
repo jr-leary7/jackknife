@@ -7,7 +7,7 @@
 #' @param center Whether or not data should be centered prior to PCA, default is TRUE
 #' @param scale Whether or not data should be scaled prior to PCA, default is TRUE
 #' @param perms How many permutations to perform on the data, default is 10
-#' @keywords PCA, t-SNE, dimension reduction
+#' @import ggplot2
 #' @export
 #' @examples
 #' choosePC(data = my_df, plot = TRUE, center = TRUE, scale = FALSE)

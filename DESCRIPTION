@@ -8,7 +8,7 @@ Authors@R:
            email = "jrleary@live.unc.edu@example.com")
 Maintainer: Jack Leary <jrleary@live.unc.edu>
 Description: Functions I've written and deemed useful enough to save. Some are for bionformatics specifically, while others are generally applicable.
-Imports: ggplot2, fgsea, dplyr
+Imports: ggplot2
 License: What license it uses
 Encoding: UTF-8
 LazyData: true

@@ -4,7 +4,7 @@
 \alias{reorderCols}
 \title{A column reordering function}
 \usage{
-reorderCols(x, matchData, xCol, newCol)
+reorderCols(x, match.data, x.col, new.col)
 }
 \arguments{
 \item{x}{The dataframe that needs to be reordered}
@@ -19,6 +19,5 @@ reorderCols(x, matchData, xCol, newCol)
 This function reorders a dataframe according to the order of identical elements of another dataframe
 }
 \examples{
-reorderCols(x = my_df, matchData = new_df, xCol = 3, newCol = 4)
+reorderCols(x = my_df, match.data = new_df, x.col = 3, new.col = 4)
 }
-\keyword{reorder}

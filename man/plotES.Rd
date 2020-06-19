@@ -4,21 +4,20 @@
 \alias{plotES}
 \title{A function for plotting enrichment scores after GSEA}
 \usage{
-plotES(geneSetList, numPlots, fgseaRes, ranks)
+plotES(gene.set.list, num.plots, fgsea.res, ranks)
 }
 \arguments{
-\item{numPlots}{The number of plots you wish to generate}
-
-\item{fgseaRes}{The results obtained from runnning fgsea()}
-
 \item{ranks}{The ranks obtained from running fgsea()}
 
 \item{geneSetLists}{A list of gene sets}
+
+\item{numPlots}{The number of plots you wish to generate}
+
+\item{fgseaRes}{The results obtained from runnning fgsea()}
 }
 \description{
 This function returns a list of enrichment plots after running GSEA using the 'fgsea' package
 }
 \examples{
-plotES(geneSetList = myGeneList, numPlots = 5, fgseaRes = myResults, ranks = myRanks)
+plotES(gene.set.list = gene_list, num.plots = 5, fgsea.res = my_results, ranks = my_ranks)
 }
-\keyword{enrichment}

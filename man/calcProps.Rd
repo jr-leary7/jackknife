@@ -15,7 +15,3 @@ This function takes as input a Seurat object, which contains cell types identifi
 \examples{
 calcProps(data = my_seurat_object)
 }
-\keyword{Seurat}
-\keyword{cell}
-\keyword{proportions,}
-\keyword{types,}

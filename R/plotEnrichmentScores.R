@@ -5,16 +5,16 @@
 #' @param numPlots The number of plots you wish to generate
 #' @param fgseaRes The results obtained from runnning fgsea()
 #' @param ranks The ranks obtained from running fgsea()
-#' @keywords enrichment
+#' @import fgsea
 #' @export
 #' @examples
-#' plotES(geneSetList = myGeneList, numPlots = 5, fgseaRes = myResults, ranks = myRanks)
+#' plotES(gene.set.list = gene_list, num.plots = 5, fgsea.res = my_results, ranks = my_ranks)
 
 
 
 
 
-plotES <- function(geneSetList, numPlots, fgseaRes, ranks) {
+plotES <- function(gene.set.list, num.plots, fgsea.res, ranks) {
   plotList <- list()
   t <- head(fgseaRes[order(padj), ], n = numPlots)
   pathwayList <- as.list(t$pathway)
