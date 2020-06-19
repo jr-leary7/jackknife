@@ -3,7 +3,7 @@
 #' This function returns the complement / inverse of the %in% operator. Useful for subsetting, etc.
 #'
 #' @export
-#' @example
-#' df <- df["df$var %!in% "pattern", ]
+#' @examples
+#' df[df$var %!in% pattern, ]
 
 `%!in%` <- Negate(`%in%`)
