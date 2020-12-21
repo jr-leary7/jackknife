@@ -24,7 +24,7 @@ OutlierPlot <- function(model = NULL) {
                 method = "loess",
                 se = FALSE,
                 span = .97,
-                size = 1) +
+                size = .5) +
     stat_function(fun = CooksD,
                   xlim = c(0, .5),
                   args = list(model = model, level = .5, positive = TRUE),

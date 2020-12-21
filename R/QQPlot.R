@@ -8,8 +8,8 @@
 #' QQPlot(model = my_lm)
 
 QQPlot <- function(model = NULL) {
-  if (is.null(model)) {stop("Please provide a model object to analyze.")}
-  if (!class(model) %in% c("lm", "glm")) {stop("Object is not of class lm or glm.")}
+  if (is.null(model)) stop("Please provide a model object to analyze.")
+  if (!class(model) %in% c("lm", "glm")) stop("Object is not of class lm or glm.")
   ggplot(NULL, aes(sample = sort(rstandard(model)))) +
     stat_qq(alpha = .7) +
     stat_qq_line(color = "deepskyblue3", size = 1, linetype = 2) +
