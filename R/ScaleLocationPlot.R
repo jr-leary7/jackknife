@@ -1,7 +1,7 @@
 #' Generate a Scale-Location plot.
 #'
 #' @description Reimplements the fitted values vs. square root-transformed standardized residuals plot found in plot.lm() in ggplot2.
-#' @param model The model which you'd like to analyze. Defaults to NULL. \
+#' @param model The model which you'd like to analyze. Defaults to NULL.
 #' @export
 #' @examples
 #' ScaleLocationPlot(model = my_lm)

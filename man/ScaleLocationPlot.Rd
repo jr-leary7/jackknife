@@ -6,6 +6,9 @@
 \usage{
 ScaleLocationPlot(model = NULL)
 }
+\arguments{
+\item{model}{The model which you'd like to analyze. Defaults to NULL.}
+}
 \description{
 Reimplements the fitted values vs. square root-transformed standardized residuals plot found in plot.lm() in ggplot2.
 }
