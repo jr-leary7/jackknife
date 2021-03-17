@@ -26,6 +26,7 @@ theme_jack <- function(grid = FALSE,
   t <- theme_minimal()
   if (!grid) t <- t + theme(panel.grid = element_blank())
   if (!legend) t <- t + theme(legend.position = "none")
+  if (legend) t <- t + theme(legend.position = legend.pos)
   if (border) t <- t + theme(panel.border = element_rect(fill = NA, size = 1))
   if (!is.null(font)) t <- t + theme(text = element_text(family = font))
   if (ticks) t <- t + theme(axis.ticks = element_line())
@@ -34,6 +35,5 @@ theme_jack <- function(grid = FALSE,
                                    plot.subtitle = element_text(hjust = 0.5),
                                    plot.title.position = "plot")
   if (y.axis.horiz) t <- t + theme(axis.title.y = element_text(angle = 360, vjust = 0.5))
-  t <- t + theme(legend.position = legend.pos)
   return(t)
 }
