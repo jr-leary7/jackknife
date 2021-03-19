@@ -29,7 +29,9 @@ CoefSummary <- function (model = NULL,
     mutate(Significant = ifelse(`P-value` < conf.level, "*", "")) -> coef_temp
   # exponentiate coefficients if criteria are met
   if ("glm" %in% class(model) && family(model)$link == "log") {
-    coef_temp %>% mutate(`Exp(Beta)` = exp(Beta)) -> coef_temp
+    coef_temp %>%
+      mutate(`Exp(Beta)` = exp(Beta)) %>%
+      relocate(Variable, Beta, `Exp(Beta)`) -> coef_temp
   }
   # create kable output if desired
   if (kable) {
