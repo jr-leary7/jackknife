@@ -8,9 +8,9 @@ CoefSummary(
   model = NULL,
   kable = TRUE,
   conf.level = 0.05,
-  font = "Avenir",
+  kable.font = "Avenir",
   kable.caption = NULL,
-  table.digits = 4
+  kable.digits = 4
 )
 }
 \arguments{
@@ -20,11 +20,11 @@ CoefSummary(
 
 \item{conf.level}{The confidence level for determining variable significance. Defaults to 95% aka 0.05.}
 
-\item{font}{What font should be used? Defaults to "Avenir".}
+\item{kable.font}{What font should be used? Defaults to "Avenir".}
 
 \item{kable.caption}{Define a caption to be placed above the table. Defaults to "Model Coefficients".}
 
-\item{table.digits}{The number of digits to round to. Defaults to 4.}
+\item{kable.digits}{The number of digits to round to. Defaults to 4.}
 }
 \description{
 This function takes in the output from lm() or glm() and provides a tidy, aesthetically-pleasing summary of the coefficients.
