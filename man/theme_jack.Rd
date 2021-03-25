@@ -12,6 +12,7 @@ theme_jack(
   ticks = FALSE,
   axis.nums = TRUE,
   legend.pos = "bottom",
+  legend.rows = 1,
   center.title = TRUE,
   y.axis.horiz = TRUE
 )
@@ -28,6 +29,8 @@ theme_jack(
 \item{axis.nums}{Should the axes show number labels? Defaults to TRUE.}
 
 \item{legend.pos}{Where should the legend be located? One of "left", "right", "bottom", "top". Defaults to "bottom".}
+
+\item{legend.rows}{How many rows shows the legend have? Mostly relevant for top/bottom-located legends. Defaults to 1.}
 
 \item{center.title}{Should the plot title and subtitle be centered? Defaults to TRUE.}
 

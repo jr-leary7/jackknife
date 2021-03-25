@@ -8,6 +8,7 @@
 #' @param font A string detailing which font should be used on all plot text. Must be capitalized correctly. Defaults to NULL.
 #' @param axis.nums Should the axes show number labels? Defaults to TRUE.
 #' @param legend.pos Where should the legend be located? One of "left", "right", "bottom", "top". Defaults to "bottom".
+#' @param legend.rows How many rows shows the legend have? Mostly relevant for top/bottom-located legends. Defaults to 1.
 #' @param center.title Should the plot title and subtitle be centered? Defaults to TRUE.
 #' @param y.axis.horiz Should the y-axis be horizontal in order to make reading easier? Defaults to TRUE.
 #' @export
@@ -21,6 +22,7 @@ theme_jack <- function(grid = FALSE,
                        ticks = FALSE,
                        axis.nums = TRUE,
                        legend.pos = "bottom",
+                       legend.rows = 1,
                        center.title = TRUE,
                        y.axis.horiz = TRUE) {
   t <- theme_minimal()
