@@ -1,0 +1,31 @@
+---
+title: "Title"
+author: "Jack Leary"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: yeti
+    highlight: tango
+    code_folding: show
+    code_download: true
+    toc: true
+    toc_float:
+      collpased: false
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.align = "center")
+set.seed(629)
+```
+
+# Libraries
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
